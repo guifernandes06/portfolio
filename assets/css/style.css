@@ -1,0 +1,1564 @@
+/* ========================================
+   1. VARIÁVEIS E CONFIGURAÇÕES GERAIS
+======================================== */
+
+:root {
+    --bg: #e9edf3;
+    --white: #f1f3f7;
+    --navy: #101d35;
+    --navy-light: #1b2c4a;
+    --blue: #3978d5;
+    --blue-light: #dce6f4;
+    --text: #263449;
+    --muted: #65748a;
+    --border: #d5dce7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* ========================================
+   2. HEADER E NAVEGAÇÃO
+======================================== */
+
+.header {
+    background: #e3e8f0;
+    border-bottom: 1px solid #cbd4e1;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--navy);
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+
+/* ========================================
+   3. BOTÕES
+======================================== */
+
+.btn {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    padding: 13px 23px;
+    border-radius: 7px;
+    border: 2px solid var(--blue);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #2864bd;
+    border-color: #2864bd;
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    padding: 9px 16px;
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border-color: rgba(255, 255, 255, .5);
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--navy);
+    border-color: white;
+}
+
+.btn-outline-dark {
+    background: transparent;
+    color: var(--navy);
+    border-color: var(--border);
+}
+
+.btn-outline-dark:hover {
+    background: var(--navy);
+    color: white;
+    border-color: var(--navy);
+}
+
+
+/* ========================================
+   4. HERO / PÁGINA INICIAL
+======================================== */
+
+.hero {
+    background: var(--navy);
+    color: white;
+    padding: 110px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.tag {
+    display: inline-block;
+    color: var(--blue);
+    background: var(--blue-light);
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 5vw, 56px);
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #80b4ff;
+}
+
+.hero h2 {
+    font-size: 21px;
+    color: #c5d5ed;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.hero-text>p {
+    color: #c1cde0;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #c5d5ed;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.social-links a:hover {
+    color: #80b4ff;
+}
+
+.hero-card {
+    background: var(--navy-light);
+    border: 1px solid #344969;
+    border-radius: 20px;
+    padding: 45px 25px;
+    text-align: center;
+}
+
+.hero-initials {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 55px;
+    font-weight: 800;
+    margin: 0 auto 25px;
+}
+
+.hero-card p {
+    margin-top: 0;
+    color: white;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.hero-card span {
+    color: #b7c7de;
+    font-size: 13px;
+}
+
+.hero-photo {
+    display: block;
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 30px;
+    border: 3px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ========================================
+   5. SECÇÕES GERAIS
+======================================== */
+
+.section {
+    padding: 90px 0;
+}
+
+.section-alt {
+    background: var(--bg);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+
+/* ========================================
+   6. O MEU PERCURSO — DESIGN UNIFICADO
+======================================== */
+
+.journey-page {
+    background: var(--white);
+    color: var(--text);
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+
+.journey-page .section-heading h2,
+.journey-page .journey-heading h3,
+.journey-page .about-intro h3 {
+    color: var(--navy);
+    font-family: 'Inter', sans-serif;
+}
+
+.journey-page .section-heading p,
+.journey-page .about-intro p {
+    color: var(--muted);
+}
+
+.journey-page .tag {
+    background: var(--blue-light);
+    color: var(--blue);
+    padding: 6px 12px;
+    letter-spacing: 1px;
+    font-size: 11px;
+}
+
+/* Introdução */
+
+.journey-page .about-intro {
+    max-width: 850px;
+    margin: 0 auto 100px;
+}
+
+.journey-page .about-intro h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.journey-page .about-intro p {
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+/* Secções */
+
+.journey-page .journey-section {
+    margin-top: 100px;
+}
+
+.journey-page .journey-heading {
+    margin-bottom: 50px;
+}
+
+.journey-page .journey-heading h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+/* Grelha de duas colunas */
+
+.journey-page .journey-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 100px;
+    row-gap: 65px;
+    align-items: start;
+}
+
+/* Linha central */
+
+.journey-page .journey-grid::before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    bottom: -35px;
+    left: 50%;
+    width: 1px;
+    background: var(--border);
+}
+
+/* Conteúdos */
+
+.journey-page .journey-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 5px 0 20px;
+    min-width: 0;
+    transition: none;
+}
+
+.journey-page .journey-card:hover {
+    transform: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+/* Alternância vertical */
+
+.journey-page .journey-card:nth-child(even) {
+    margin-top: 125px;
+}
+
+/* Pontos da linha central */
+
+.journey-page .journey-card::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--blue);
+    box-shadow: 0 0 0 5px var(--white);
+}
+
+.journey-page .journey-card:nth-child(odd)::after {
+    right: -55px;
+}
+
+.journey-page .journey-card:nth-child(even)::after {
+    left: -55px;
+}
+
+/* Datas */
+
+.journey-page .journey-date {
+    color: var(--blue);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+/* Títulos */
+
+.journey-page .journey-card h4 {
+    color: var(--navy);
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(25px, 2.5vw, 34px);
+    line-height: 1.3;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+/* Instituição e empresa */
+
+.journey-page .journey-institution {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+/* Descrição */
+
+.journey-page .journey-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 560px;
+    margin-bottom: 25px;
+}
+
+/* Etiquetas */
+
+.journey-page .journey-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.journey-page .journey-tags span {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    color: var(--muted);
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: .7px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.journey-page .journey-tags span:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    background: var(--blue-light);
+}
+
+/* Tablets */
+
+@media (max-width: 850px) {
+
+    .journey-page {
+        padding: 75px 0;
+    }
+
+    .journey-page .journey-grid {
+        column-gap: 50px;
+    }
+
+    .journey-page .journey-card h4 {
+        font-size: 25px;
+    }
+
+    .journey-page .journey-card:nth-child(even) {
+        margin-top: 90px;
+    }
+
+    .journey-page .journey-card:nth-child(odd)::after {
+        right: -30px;
+    }
+
+    .journey-page .journey-card:nth-child(even)::after {
+        left: -30px;
+    }
+}
+
+/* Telemóveis */
+
+@media (max-width: 600px) {
+
+    .journey-page {
+        padding: 65px 0;
+    }
+
+    .journey-page .about-intro {
+        margin-bottom: 65px;
+    }
+
+    .journey-page .journey-section {
+        margin-top: 65px;
+    }
+
+    .journey-page .journey-heading h3 {
+        font-size: 27px;
+    }
+
+    .journey-page .journey-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .journey-page .journey-grid::before {
+        display: none;
+    }
+
+    .journey-page .journey-card {
+        padding: 0 0 30px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .journey-page .journey-card:nth-child(even) {
+        margin-top: 0;
+    }
+
+    .journey-page .journey-card::after {
+        display: none;
+    }
+
+    .journey-page .journey-card h4 {
+        font-size: 25px;
+    }
+
+    .journey-page .journey-card p {
+        font-size: 13px;
+    }
+}
+
+
+/* ========================================
+   7. PROJETOS
+======================================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.project-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 30px;
+    border-radius: 12px;
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--blue);
+    box-shadow: 0 12px 30px rgba(16, 29, 53, .08);
+}
+
+.project-number {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.project-card h3 {
+    color: var(--navy);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.project-tech {
+    display: inline-block;
+    background: var(--blue-light);
+    color: var(--blue);
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.project-link:hover {
+    color: var(--navy);
+}
+
+.project-link span {
+    margin-left: 5px;
+}
+
+.back-home {
+    text-align: center;
+    margin-top: 55px;
+}
+
+
+/* ========================================
+   8. PÁGINA DE TODOS OS PROJETOS
+======================================== */
+
+.projects-page {
+    min-height: 75vh;
+}
+
+.project-image-link {
+    display: block;
+    margin: -30px -30px 22px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.project-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    transition: .3s;
+}
+
+.project-image-link:hover .project-image {
+    transform: scale(1.04);
+}
+
+.project-placeholder {
+    height: 190px;
+    background: linear-gradient(135deg, #172b4d, #3978d5);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* ========================================
+   9. PÁGINA INDIVIDUAL DO PROJETO
+   Regras de capa mantidas como fallback para páginas sem carrossel.
+======================================== */
+
+.project-detail {
+    padding: 70px 0 90px;
+    background: var(--bg);
+    min-height: 80vh;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.back-link:hover {
+    color: var(--navy);
+}
+
+.project-detail-header {
+    max-width: 800px;
+    margin-bottom: 35px;
+}
+
+.project-detail-header h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.project-detail-header p {
+    color: var(--muted);
+    font-size: 17px;
+}
+
+.project-cover {
+    width: 100%;
+    height: 430px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.project-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-cover-placeholder {
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #172b4d, #3978d5);
+}
+
+.project-detail-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.project-description {
+    margin-bottom: 45px;
+}
+
+.project-description h2 {
+    color: var(--navy);
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.project-description p {
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.project-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.project-skills .skill {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    color: var(--muted);
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: .7px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.project-skills .skill:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    background: var(--blue-light);
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+
+/* ========================================
+   10. CONTACTO
+======================================== */
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--blue);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-info h3 {
+    color: var(--navy);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info>p {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+
+.contact-detail span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-detail a {
+    color: var(--blue);
+    font-size: 15px;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.contact-detail a:hover {
+    color: var(--navy);
+}
+
+/* Notificações */
+.form-notification {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 13px 15px;
+    border-radius: 7px;
+    font-size: 13px;
+    margin-top: 30px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .4s ease, transform .4s ease;
+}
+
+.form-success {
+    color: #218838;
+    background: #dff3e4;
+    border: 1px solid #b8dfc2;
+}
+
+.form-error {
+    color: #b42318;
+    background: #fde8e7;
+    border: 1px solid #f5c2c0;
+}
+
+.notification-close {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 23px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 3px;
+    flex-shrink: 0;
+}
+
+.notification-close:hover {
+    opacity: .65;
+}
+
+.form-notification.hide {
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+}
+
+/* ========================================
+   11. FOOTER
+======================================== */
+
+.footer {
+    background: var(--navy);
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer .logo {
+    color: white;
+}
+
+.footer p {
+    color: #b7c7de;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 18px;
+}
+
+.footer-socials a {
+    font-size: 13px;
+    color: #c5d5ed;
+    transition: .3s;
+}
+
+.footer-socials a:hover {
+    color: white;
+}
+
+
+/* ========================================
+   12. RESPONSIVIDADE — TABLETS
+======================================== */
+
+@media (max-width: 850px) {
+
+    .hero-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 75px 0;
+    }
+
+    .hero-card {
+        max-width: 400px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .journey-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-section {
+        margin-top: 55px;
+    }
+}
+
+
+/* ========================================
+   13. RESPONSIVIDADE — TELEMÓVEIS
+======================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 17px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        text-align: center;
+    }
+
+    .social-links {
+        gap: 17px;
+        flex-wrap: wrap;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .journey-heading h3 {
+        font-size: 25px;
+    }
+
+    .journey-card {
+        padding: 23px;
+    }
+
+    .journey-card h4 {
+        font-size: 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .project-cover {
+        height: 230px;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .project-gallery img {
+        height: 210px;
+    }
+}
+
+
+/* ========================================
+   14. CARROSSEL DA PÁGINA INDIVIDUAL
+======================================== */
+
+.project-carousel {
+    position: relative;
+    width: 100%;
+    margin-bottom: 60px;
+    overflow: hidden;
+    background: #f1eae4;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.project-carousel-track {
+    width: 100%;
+}
+
+.project-carousel-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 560px;
+    padding: 28px 76px;
+    background: #f1eae4;
+}
+
+.project-carousel-slide[hidden] {
+    display: none;
+}
+
+/* Mantém a imagem inteira, sem cortes nem deformações. */
+.project-carousel-slide img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 560px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 3px;
+}
+
+/* SETAS */
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    transform: translateY(-50%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    background: rgba(17, 29, 54, 0.88);
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background .25s, transform .25s;
+}
+
+.carousel-arrow:hover {
+    background: var(--blue);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-prev {
+    left: 20px;
+}
+
+.carousel-next {
+    right: 20px;
+}
+
+/* RODAPÉ DO CARROSSEL */
+
+.project-carousel-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 16px 22px;
+    background: var(--navy);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.carousel-counter {
+    color: #c5d5ed;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* INDICADORES */
+
+.carousel-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #66758d;
+    cursor: pointer;
+    transition: width .25s, background .25s;
+}
+
+.carousel-dot.active {
+    width: 23px;
+    border-radius: 10px;
+    background: var(--blue);
+}
+
+/* RESPONSIVIDADE DO CARROSSEL */
+
+@media (max-width: 850px) {
+    .project-carousel-slide {
+        min-height: 460px;
+        padding: 24px 65px;
+    }
+
+    .project-carousel-slide img {
+        max-height: 460px;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-carousel {
+        margin-bottom: 40px;
+        border-radius: 11px;
+    }
+
+    .project-carousel-slide {
+        min-height: 300px;
+        padding: 18px 48px;
+    }
+
+    .project-carousel-slide img {
+        max-height: 300px;
+    }
+
+    .carousel-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .carousel-prev {
+        left: 9px;
+    }
+
+    .carousel-next {
+        right: 9px;
+    }
+
+    .project-carousel-footer {
+        padding: 13px 15px;
+    }
+
+    .carousel-dots {
+        gap: 7px;
+    }
+}
+
+
+/* ========================================
+   AJUSTES DO CARROSSEL — TAMANHO E FUNDO UNIFORMES
+======================================== */
+
+/* Fundo igual ao do resto do site */
+.project-carousel,
+.project-carousel-slide {
+    background: var(--bg);
+}
+
+/* Todos os slides têm exatamente a mesma altura */
+.project-carousel-slide {
+    height: 560px;
+    min-height: 0;
+    padding: 28px 76px;
+}
+
+.project-carousel-slide img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 504px;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* 1.ª imagem — website em display de computador */
+.project-carousel-slide .laptop-frame {
+    width: min(100%, 760px);
+    margin: 0 auto;
+}
+
+.project-carousel-slide .laptop-screen {
+    overflow: hidden;
+    background: #111;
+    border: 10px solid #1b1b1f;
+    border-radius: 14px 14px 0 0;
+    box-shadow: 0 18px 40px rgba(20, 33, 61, 0.18);
+}
+
+.project-carousel-slide .laptop-frame .laptop-screen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 440px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 0;
+}
+
+.project-carousel-slide .laptop-base {
+    position: relative;
+    width: calc(100% + 56px);
+    height: 14px;
+    margin-left: -28px;
+    background: linear-gradient(#dfe2e7, #a9adb4);
+    border-radius: 0 0 14px 14px;
+}
+
+.project-carousel-slide .laptop-base::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 110px;
+    height: 5px;
+    transform: translateX(-50%);
+    background: #8f939a;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Imagem de telemóvel — display de smartphone */
+.project-carousel-slide .phone-frame {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: #111;
+    border: 10px solid #1b1b1f;
+    border-radius: 36px;
+    box-shadow: 0 18px 40px rgba(20, 33, 61, 0.18);
+}
+
+.project-carousel-slide .phone-frame img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 260px;
+    max-height: 450px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 0;
+}
+
+/* Tablets */
+@media (max-width: 850px) {
+    .project-carousel-slide {
+        height: 460px;
+        padding: 24px 65px;
+    }
+
+    .project-carousel-slide img {
+        max-height: 412px;
+    }
+
+    .project-carousel-slide .laptop-frame .laptop-screen img {
+        max-height: 360px;
+    }
+
+    .project-carousel-slide .phone-frame img {
+        max-height: 380px;
+    }
+}
+
+/* Telemóveis */
+@media (max-width: 600px) {
+    .project-carousel-slide {
+        height: 400px;
+        padding: 18px 48px;
+    }
+
+    .project-carousel-slide img {
+        max-height: 364px;
+    }
+
+    .project-carousel-slide .laptop-screen {
+        border-width: 6px;
+        border-radius: 9px 9px 0 0;
+    }
+
+    .project-carousel-slide .laptop-frame .laptop-screen img {
+        max-height: 300px;
+    }
+
+    .project-carousel-slide .phone-frame {
+        border-width: 6px;
+        border-radius: 26px;
+    }
+
+    .project-carousel-slide .phone-frame img {
+        max-width: 200px;
+        max-height: 330px;
+    }
+
+    .project-carousel-slide .laptop-base {
+        width: calc(100% + 24px);
+        margin-left: -12px;
+        height: 10px;
+    }
+
+    .project-carousel-slide .laptop-base::after {
+        width: 70px;
+    }
+
+    .carousel-prev {
+        left: 8px;
+    }
+
+    .carousel-next {
+        right: 8px;
+    }
+
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* =================================
+   BOTÃO VOLTAR AO TOPO
+================================= */
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--navy);
+    color: #fff;
+
+    font-size: 26px;
+    font-weight: 600;
+    text-decoration: none;
+
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(10px);
+
+    transition: opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+
+    z-index: 999;
+}
+
+/* =================================
+   BOTÃO VOLTAR AO TOPO
+================================= */
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--navy);
+    color: #fff;
+
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(10px);
+
+    transition: all 0.3s ease;
+
+    z-index: 999;
+}
+
+.back-to-top svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--blue);
+    transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        right: 20px;
+        bottom: 20px;
+        width: 46px;
+        height: 46px;
+    }
+}
